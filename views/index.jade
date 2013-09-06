@@ -1,0 +1,51 @@
+extends layout
+
+block content
+	.navbar
+		.navbar.navbar-default.navbar-fixed-top			
+			a.navbar-brand(href="#") Zefira
+			.navbar-collapse.collapse.navbar-responsive-collapse 
+				ul.nav.navbar-nav.navbar-right
+					li.dropdown
+						a(data-toggle="dropdown", href="#").dropdown-toggle Log in 
+							b.caret
+
+						ul.dropdown-menu 
+							li
+								form.navbar-form(action="/login", method="post")
+									input.form-control(type="text", name="email", placeholder="Email" )
+									input.form-control(type="password", name="password", placeholder="Password" )
+									br 
+									br
+									input.btn.btn-info(style="clear: left; width: 220px; height: 32px; font-size: 13px;" ,type="submit", value= "Login" )
+
+
+	.container
+		.row
+			.col-lg-12 		
+				.page-header.heading 		
+					h1#container Acceso Total	
+				.jumbotron
+					h1 Una nueva manera de experimentar tu ciudad
+					p No mas colas, No mas colgaderas 
+					a.btn.btn-info Unete a la beta...
+		.row				
+			.col-lg-4
+				.panel.panel-success
+					.panel-heading Titulo Panel
+					.panel-body Testing panel 
+
+			.col-lg-4
+				.panel.panel-success
+					.panel-heading Panel Heading
+					.panel-body Testing panel 
+					
+			.col-lg-4
+				.panel.panel-success
+					.panel-heading Panel Heading
+					.panel-body Testing panel 				
+
+
+
+	script(src='/javascripts/jquery-1.9.1.js')
+	script(src='/javascripts/bootstrap.js')							
